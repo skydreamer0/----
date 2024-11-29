@@ -5,11 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
-    "lint": "next lint",
-    "api-docs": "swagger-ui-express ./app/api/swagger.json",
-    "clean:ui": "ts-node -P tsconfig.json scripts/clean-unused-components.ts"
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
