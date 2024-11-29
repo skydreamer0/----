@@ -17,7 +17,9 @@ export async function apiClient<T>(
   };
 
   if (options.token) {
-    headers.Authorization = `Bearer ${options.token}`;
+    Object.assign(headers, {
+      'Authorization': `Bearer ${options.token}`
+    });
   }
 
   try {
