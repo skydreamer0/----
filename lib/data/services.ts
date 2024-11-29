@@ -1,3 +1,6 @@
+// 位置：lib/data/services.ts
+// 功能：提供服務資料
+
 export const services = [
   {
     title: "Luxury Facial Treatment",

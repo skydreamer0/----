@@ -1,3 +1,6 @@
+// 位置：lib/api/client.ts
+// 功能：提供 API 客戶端
+
 import { ApiResponse } from '../types/api';
 
 interface FetchOptions extends RequestInit {

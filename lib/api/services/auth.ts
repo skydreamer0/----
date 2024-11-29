@@ -1,3 +1,6 @@
+// 位置：lib/api/services/auth.ts
+// 功能：提供認證服務
+
 import { apiClient } from '../client';
 import { AUTH_ENDPOINTS } from '../endpoints';
 import { LoginRequest, LoginResponse, ApiResponse } from '../../types/api';

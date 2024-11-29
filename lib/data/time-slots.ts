@@ -1,3 +1,6 @@
+// 位置：lib/data/time-slots.ts
+// 功能：提供時間槽資料
+
 export const timeSlots = [
   "9:00 AM",
   "10:00 AM",

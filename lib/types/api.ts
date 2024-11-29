@@ -1,4 +1,6 @@
-// API Response Types
+// 位置：lib/types/api.ts
+// 功能：提供 API 回應的型別
+
 export interface ApiResponse<T> {
   success: boolean;
   data?: T;

@@ -1,3 +1,6 @@
+// 位置：lib/api/services/appointments.ts
+// 功能：提供預約服務
+
 import { apiClient } from '../client';
 import { APPOINTMENT_ENDPOINTS } from '../endpoints';
 import { Appointment, ApiResponse } from '../../types/api';

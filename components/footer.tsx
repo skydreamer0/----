@@ -1,3 +1,6 @@
+// 位置：components/footer.tsx
+// 功能：提供頁腳區域
+
 import { Sparkles } from "lucide-react";
 
 export function Footer() {
