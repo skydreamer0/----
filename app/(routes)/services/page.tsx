@@ -9,6 +9,7 @@ import { ArrowRight, Award, Shield, Heart, ThumbsUp } from "lucide-react";
 import Link from "next/link";
 import { PriceComparison } from "@/components/services/price-comparison";
 import { Testimonials } from "@/components/services/testimonials";
+import { BrandValues } from "@/components/services/brand-values";
 
 export default function ServicesPage() {
   return (
@@ -74,34 +75,15 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        {/* 服務保證區塊 */}
-        <div className="mt-32">
-          <FadeIn>
-            <h2 className="text-3xl font-bold text-center mb-16">我們的服務保證</h2>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {guarantees.map((item, index) => (
-              <FadeIn 
-                key={item.title}
-                delay={index * 0.1}
-                className="text-center p-6"
-              >
-                <div className="w-16 h-16 mx-auto mb-6 bg-rose-50 rounded-full flex items-center justify-center">
-                  <item.icon className="w-8 h-8 text-rose-500" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </div>
+        {/* 添加品牌理念區塊 */}
+        <BrandValues />
 
-      {/* 添加價格比較表 */}
-      <PriceComparison />
-      
-      {/* 添加客戶評價 */}
-      <Testimonials />
+        {/* 價格比較表 */}
+        <PriceComparison />
+        
+        {/* 客戶評價 */}
+        <Testimonials />
+      </div>
     </div>
   );
 }
