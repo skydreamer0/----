@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /<repository-name>
+          NEXT_PUBLIC_BASE_PATH: /----
 
       - name: Export
         run: npm run export
