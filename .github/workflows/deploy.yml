@@ -22,10 +22,11 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /beautywebsite
+          NEXT_PUBLIC_BASE_URL: http://twbeauty.us.kg
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          cname: twbeauty.us.kg

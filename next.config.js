@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'http://twbeauty.us.kg' : '',
   images: {
     unoptimized: true,
+    domains: ['images.unsplash.com'],
   },
   trailingSlash: true,
 }
