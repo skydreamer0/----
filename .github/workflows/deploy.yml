@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_URL: http://twbeauty.us.kg
+          NEXT_PUBLIC_BASE_URL: https://twbeauty.us.kg
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
