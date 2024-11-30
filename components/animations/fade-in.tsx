@@ -1,45 +1,46 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
 interface FadeInProps {
   children: ReactNode;
+  className?: string;
   direction?: "up" | "down" | "left" | "right";
   delay?: number;
-  className?: string;
 }
 
-export function FadeIn({ 
-  children, 
-  direction = "up", 
-  delay = 0,
-  className = "" 
+export function FadeIn({
+  children,
+  className,
+  direction = "up",
+  delay = 0
 }: FadeInProps) {
   const directions = {
     up: { y: 20 },
     down: { y: -20 },
-    left: { x: -20 },
-    right: { x: 20 }
+    left: { x: 20 },
+    right: { x: -20 }
   };
 
   return (
     <motion.div
-      initial={{ 
+      initial={{
         opacity: 0,
         ...directions[direction]
       }}
-      whileInView={{ 
+      animate={{
         opacity: 1,
         x: 0,
         y: 0
       }}
-      transition={{ 
-        duration: 0.6,
-        delay 
+      transition={{
+        duration: 0.5,
+        delay: delay,
+        ease: "easeOut"
       }}
-      viewport={{ once: true }}
-      className={className}
+      className={cn(className)}
     >
       {children}
     </motion.div>

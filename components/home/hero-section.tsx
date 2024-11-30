@@ -4,13 +4,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Sparkles } from "lucide-react";
 import { images } from "@/lib/config/images";
+import { Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
     <section className="relative h-[90vh] flex items-center justify-center">
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url('${images.hero.url}')` }}
         role="img"
@@ -25,10 +26,12 @@ export function HeroSection() {
         <p className="text-xl md:text-2xl mb-8">
           體驗為您量身打造的奢華美容療程
         </p>
-        <Button size="lg" className="bg-rose-500 hover:bg-rose-600">
-          預約諮詢
-          <Sparkles className="ml-2 h-4 w-4" />
-        </Button>
+        <Link href="/booking">
+          <Button size="lg" className="bg-rose-500 hover:bg-rose-600">
+            預約諮詢
+            <Sparkles className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       </div>
     </section>
   );
