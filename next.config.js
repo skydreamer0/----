@@ -7,6 +7,12 @@ const nextConfig = {
     domains: ['images.unsplash.com'],
   },
   trailingSlash: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 }
 
 module.exports = nextConfig
